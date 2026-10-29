@@ -1,6 +1,6 @@
 # R@dexs
 
-### Software development · Python · C#/.NET · SQL Server
+### Software Developer · Python · C#/.NET · SQL Server · Applied AI
 
 [Español](#español) · [English](#english) · [简体中文](#中文简体) · [日本語](#日本語) · [العربية](#العربية)
 
