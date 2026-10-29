@@ -42,9 +42,32 @@
     .chat-launcher{position:fixed;right:24px;bottom:24px;z-index:60;width:62px;height:62px;border:1px solid rgba(193,255,247,.58);border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#66ebdc,#4298ba);color:#041414;box-shadow:0 0 0 7px rgba(104,238,224,.08),0 0 30px rgba(104,238,224,.32);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}.chat-launcher:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 0 9px rgba(104,238,224,.10),0 0 42px rgba(104,238,224,.46)}.chat-launcher svg{width:27px;height:27px}.chat-window{position:fixed;right:24px;bottom:100px;z-index:59;width:min(380px,calc(100vw - 28px));height:min(590px,calc(100dvh - 124px));min-height:410px;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(104,238,224,.29);border-radius:17px;background:linear-gradient(150deg,rgba(12,29,36,.98),rgba(5,16,22,.99));box-shadow:0 24px 80px rgba(0,0,0,.55),0 0 40px rgba(104,238,224,.10);opacity:0;visibility:hidden;transform:translateY(14px) scale(.97);transform-origin:bottom right;pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s;backdrop-filter:blur(20px)}.chat-window.open{opacity:1;visibility:visible;transform:translateY(0) scale(1);pointer-events:auto}.chat-head{display:flex;align-items:center;gap:12px;padding:15px 16px;border-bottom:1px solid var(--line);background:linear-gradient(100deg,rgba(28,75,79,.54),rgba(10,30,38,.35))}.chat-avatar{width:39px;height:39px;flex:0 0 39px;border:1px solid #68eee078;border-radius:50%;display:grid;place-items:center;color:var(--cyan);font:600 12px ui-monospace,monospace;box-shadow:0 0 15px #68eee021}.chat-title{min-width:0;flex:1}.chat-title strong{display:block;font-size:13px;line-height:1.35}.chat-title span{display:block;color:#88aaa8;font-size:10px;margin-top:2px}.chat-close{width:32px;height:32px;border:0;border-radius:50%;background:#ffffff08;color:#9eb6b9;font-size:19px;cursor:pointer}.chat-close:hover{background:#ffffff14;color:white}.chat-body{flex:1;overflow:auto;padding:18px 14px 12px;background-image:radial-gradient(ellipse at 50% 0%,rgba(50,120,124,.10),transparent 65%)}.chat-time{text-align:center;margin:0 0 15px;color:#6f898e;font:9px ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}.chat-bubble{width:fit-content;max-width:88%;padding:10px 12px;border:1px solid rgba(128,211,204,.12);border-radius:5px 14px 14px 14px;background:#10252b;color:#cfdfdf;font-size:12px;line-height:1.65;margin:0 0 12px;white-space:pre-wrap;overflow-wrap:anywhere}.chat-bubble.user{margin-left:auto;border-color:#68eee02a;border-radius:14px 5px 14px 14px;background:linear-gradient(145deg,#123b3c,#123039)}.chat-bubble.notice{max-width:100%;border-color:#ffd18c36;background:rgba(54,44,30,.4);color:#c5bda9;font-size:10px}.chat-bubble.notice strong{color:#f2d29a}.chat-action{display:inline-flex;margin-top:10px;padding:8px 10px;border:1px solid #68eee052;border-radius:7px;color:var(--cyan);font:600 9px ui-monospace,monospace;letter-spacing:.04em}.chat-action:hover{background:#68eee010}.chat-form{display:flex;gap:9px;align-items:flex-end;padding:12px;border-top:1px solid var(--line);background:#08171c}.chat-input{resize:none;max-height:105px;min-height:42px;flex:1;border:1px solid rgba(128,211,204,.20);border-radius:11px;padding:11px 12px;background:#0c2026;color:var(--text);font:inherit;font-size:12px;line-height:1.45;outline:none}.chat-input:focus{border-color:#68eee080;box-shadow:0 0 0 3px #68eee012}.chat-input::placeholder{color:#718a8f}.chat-send{width:42px;height:42px;flex:0 0 42px;border:0;border-radius:11px;display:grid;place-items:center;background:var(--cyan);color:#041414;cursor:pointer;box-shadow:0 0 18px #68eee021}.chat-send:hover{background:#a0fff0}.chat-send svg{width:19px;height:19px}.chat-footnote{padding:0 13px 11px;background:#08171c;color:#6e8589;font-size:9px;line-height:1.5}.chat-footnote a{color:#99b7b8;text-decoration:underline;text-underline-offset:2px}
     @media(max-width:520px){.chat-launcher{right:16px;bottom:16px;width:58px;height:58px}.chat-window{right:10px;bottom:84px;width:calc(100vw - 20px);height:min(620px,calc(100dvh - 100px));min-height:380px}}
     @media(prefers-reduced-motion:reduce){.chat-launcher,.chat-window{transition:none}}
+    /* Immersive portfolio treatment, built specifically for Radexs. */
+    body.booting{overflow:hidden}.wrap{position:relative;z-index:1}
+    .nav{position:fixed;z-index:45;top:15px;left:50%;width:min(860px,calc(100% - 30px));height:62px;padding:0 17px;border:1px solid rgba(142,244,232,.2);border-radius:999px;background:rgba(5,15,20,.7);backdrop-filter:blur(20px);box-shadow:0 10px 50px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.035);transform:translateX(-50%);transition:transform .28s cubic-bezier(.2,.8,.2,1),border-color .28s,box-shadow .28s}
+    .nav.scroll-ripple{transform:translateX(-50%) scale(.985);border-color:rgba(104,238,224,.48);box-shadow:0 12px 55px rgba(0,0,0,.32),0 0 24px rgba(104,238,224,.11)}
+    .topline{position:relative;z-index:2}.hero{min-height:min(850px,100svh);padding-top:116px;scroll-margin-top:96px}.section{scroll-margin-top:95px;padding-top:125px}h1{font-size:clamp(58px,8.6vw,116px);letter-spacing:-.085em}
+    .flow-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.74;mix-blend-mode:screen}
+    .boot-overlay{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;background:#03080c;color:#dffaf5;opacity:1;visibility:visible;transition:opacity .75s cubic-bezier(.2,.7,.2,1),visibility .75s}
+    .boot-overlay:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(20,105,112,.2),transparent 40%),linear-gradient(180deg,transparent 49.8%,rgba(133,255,240,.025) 50%,transparent 50.3%);background-size:auto,100% 5px;pointer-events:none}
+    .boot-overlay:after{content:"";position:absolute;inset:8% 5%;border:1px solid rgba(102,220,213,.095);clip-path:polygon(0 0,15% 0,15% 1px,85% 1px,85% 0,100% 0,100% 100%,77% 100%,77% calc(100% - 1px),23% calc(100% - 1px),23% 100%,0 100%);pointer-events:none}
+    .boot-overlay.leaving{opacity:0;visibility:hidden}.boot-console{position:relative;width:min(650px,calc(100% - 46px));z-index:1}.boot-topline,.boot-bottomline{display:flex;justify-content:space-between;gap:16px;color:#6c9a9c;font:9px ui-monospace,SFMono-Regular,monospace;letter-spacing:.13em;text-transform:uppercase}.boot-center{display:grid;justify-items:center;padding:35px 0 29px}.boot-emblem{position:relative;width:112px;height:112px;display:grid;place-items:center;margin-bottom:28px;color:#c5fff3;font:600 25px ui-monospace,monospace;letter-spacing:-.1em}.boot-emblem:before,.boot-emblem:after{content:"";position:absolute;inset:0;border:1px solid rgba(95,239,223,.44);border-radius:50%;box-shadow:0 0 30px rgba(75,226,216,.1),inset 0 0 22px rgba(75,226,216,.08);animation:boot-orbit 8s linear infinite}.boot-emblem:after{inset:12px;border-color:rgba(117,176,255,.39);transform:rotate(50deg) scaleY(.42);animation:boot-orbit 11s linear infinite reverse}.boot-emblem span{position:relative;z-index:1;text-shadow:0 0 22px rgba(112,255,235,.65)}.boot-kicker{color:#68eee0;font:10px ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase}.boot-title{margin:13px 0 7px;text-align:center;font-size:clamp(28px,5vw,45px);line-height:1;letter-spacing:-.06em;font-weight:550}.boot-subtitle{color:#7c9b9f;font:10px ui-monospace,monospace;letter-spacing:.1em;text-align:center}.boot-meter{height:2px;margin-top:25px;background:#173039;overflow:hidden}.boot-meter i{display:block;width:0;height:100%;background:linear-gradient(90deg,#57ddcf,#93ffec,#77aaff);box-shadow:0 0 14px #68eee0;transition:width .08s linear}.boot-readout{display:flex;justify-content:space-between;margin-top:9px;color:#79999d;font:10px ui-monospace,monospace}.boot-log{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin-top:29px;padding-top:18px;border-top:1px solid rgba(103,210,209,.12)}.boot-log div{display:flex;align-items:center;gap:9px;color:#58777d;font:9px ui-monospace,monospace;letter-spacing:.04em;transition:color .25s}.boot-log .done{color:#99c9c2}.boot-log b{width:6px;height:6px;border:1px solid currentColor;border-radius:50%;font-weight:400}.boot-log .done b{background:#68eee0;box-shadow:0 0 10px #68eee0}.boot-bottomline{margin-top:25px;align-items:center}.boot-skip{border:1px solid rgba(104,238,224,.2);border-radius:99px;padding:7px 12px;background:transparent;color:#8bb5b5;font:9px ui-monospace,monospace;letter-spacing:.1em;cursor:pointer}.boot-skip:hover{border-color:#68eee0;color:#c9fff5}.boot-flare{position:absolute;width:min(68vw,700px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(42,157,163,.08),transparent 66%);animation:boot-breathe 4s ease-in-out infinite;pointer-events:none}
+    @keyframes boot-orbit{to{transform:rotate(360deg)}}@keyframes boot-breathe{50%{transform:scale(1.12);opacity:.6}}
+    @media(max-width:620px){.nav{top:10px;height:58px;padding:0 12px}.navlinks{display:none}.hero{min-height:90svh;padding-top:96px}h1{font-size:clamp(56px,15vw,86px)}.section{padding-top:88px}.boot-log{grid-template-columns:1fr}.boot-center{padding:28px 0 22px}.boot-emblem{width:88px;height:88px;margin-bottom:22px}.boot-topline,.boot-bottomline{font-size:8px}.boot-overlay:after{inset:4% 3%}}
+    @media(prefers-reduced-motion:reduce){.boot-emblem:before,.boot-emblem:after,.boot-flare{animation:none}.flow-canvas{display:none}.boot-overlay,.boot-meter i{transition:none}}
   </style>
 </head>
 <body>
+  <canvas class="flow-canvas" id="flow-canvas" aria-hidden="true"></canvas>
+  <div class="boot-overlay" id="boot-overlay" role="status" aria-label="Iniciando sistema Radexs">
+    <div class="boot-flare" aria-hidden="true"></div><div class="boot-console">
+      <div class="boot-topline"><span>RADEXS / PERSONAL SYSTEM</span><span>BOOT SEQUENCE · 01.0</span></div>
+      <div class="boot-center"><div class="boot-emblem"><span>RX</span></div><div class="boot-kicker">Secure interface environment</div><h1 class="boot-title">Iniciando sistema</h1><div class="boot-subtitle" id="boot-status">Preparando la experiencia digital</div></div>
+      <div class="boot-meter" aria-label="Progreso de inicio"><i id="boot-progress"></i></div><div class="boot-readout"><span id="boot-phase">CARGANDO INTERFAZ</span><span id="boot-percent">00%</span></div>
+      <div class="boot-log" id="boot-log"><div><b></b> Interfaz personal</div><div><b></b> Conexión con GitHub</div><div><b></b> Experiencia visual</div><div><b></b> Canal de contacto</div></div>
+      <div class="boot-bottomline"><span>CHILE · ONLINE PORTFOLIO</span><button class="boot-skip" id="boot-skip" type="button">OMITIR INICIO ↗</button></div>
+    </div>
+  </div>
   <div class="cursor-aura" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
   <div class="grid-bg" aria-hidden="true"></div><div class="topline"></div>
   <header class="wrap nav">
@@ -125,6 +148,113 @@
     }
     loadGitHub();
     const motionAllowed = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const bootOverlay = document.getElementById("boot-overlay");
+    const bootProgress = document.getElementById("boot-progress");
+    const bootPercent = document.getElementById("boot-percent");
+    const bootPhase = document.getElementById("boot-phase");
+    const bootStatus = document.getElementById("boot-status");
+    const bootLogItems = [...document.querySelectorAll("#boot-log > div")];
+    const bootSkip = document.getElementById("boot-skip");
+    document.body.classList.add("booting");
+    const bootInert = [document.querySelector(".nav"), document.querySelector("main"), document.querySelector("footer"), document.getElementById("chat-window"), document.getElementById("chat-launcher")];
+    bootInert.forEach(element => { if (element) element.inert = true; });
+    let bootDone = false;
+    const completeBoot = () => {
+      if (bootDone) return;
+      bootDone = true;
+      bootProgress.style.width = "100%";
+      bootPercent.textContent = "100%";
+      bootPhase.textContent = "SISTEMA LISTO";
+      bootStatus.textContent = "Experiencia preparada";
+      bootLogItems.forEach(item => item.classList.add("done"));
+      bootOverlay.classList.add("leaving");
+      window.setTimeout(() => {
+        bootOverlay.remove();
+        document.body.classList.remove("booting");
+        bootInert.forEach(element => { if (element) element.inert = false; });
+      }, motionAllowed ? 800 : 0);
+    };
+    bootSkip.addEventListener("click", completeBoot);
+    if (!motionAllowed) {
+      completeBoot();
+    } else {
+      const bootStartedAt = performance.now();
+      const bootDuration = 3100;
+      const bootStages = [
+        {at:0, phase:"CARGANDO INTERFAZ", status:"Montando entorno personal"},
+        {at:.25, phase:"CONECTANDO GITHUB", status:"Sincronizando información pública"},
+        {at:.52, phase:"ACTIVANDO EXPERIENCIA", status:"Preparando el espacio visual"},
+        {at:.78, phase:"INICIANDO CANAL", status:"Habilitando formas de contacto"}
+      ];
+      const advanceBoot = now => {
+        if (bootDone) return;
+        const progress = Math.min(1,(now-bootStartedAt)/bootDuration);
+        const percent = Math.floor(progress*100);
+        bootProgress.style.width = `${percent}%`;
+        bootPercent.textContent = `${String(percent).padStart(2,"0")}%`;
+        const stage = [...bootStages].reverse().find(item => progress >= item.at) || bootStages[0];
+        bootPhase.textContent = stage.phase;
+        bootStatus.textContent = stage.status;
+        bootLogItems.forEach((item,index) => item.classList.toggle("done",progress >= [.15,.4,.66,.87][index]));
+        if (progress >= 1) completeBoot();
+        else requestAnimationFrame(advanceBoot);
+      };
+      requestAnimationFrame(advanceBoot);
+    }
+    const flowCanvas = document.getElementById("flow-canvas");
+    const flowContext = flowCanvas.getContext("2d");
+    let flowWidth = 0, flowHeight = 0, flowFrame = 0, flowTrail = [];
+    const resizeFlow = () => {
+      const scale = Math.min(window.devicePixelRatio || 1,1.5);
+      flowWidth = window.innerWidth;
+      flowHeight = window.innerHeight;
+      flowCanvas.width = Math.round(flowWidth*scale);
+      flowCanvas.height = Math.round(flowHeight*scale);
+      flowContext.setTransform(scale,0,0,scale,0,0);
+    };
+    resizeFlow();
+    window.addEventListener("resize",resizeFlow,{passive:true});
+    if (motionAllowed) {
+      const drawFlow = now => {
+        flowFrame = 0;
+        flowContext.clearRect(0,0,flowWidth,flowHeight);
+        flowTrail = flowTrail.filter(point => now-point.time < 760);
+        if (flowTrail.length > 1) {
+          flowContext.save();
+          flowContext.globalCompositeOperation = "lighter";
+          flowContext.lineCap = "round";
+          for (let index=1; index<flowTrail.length; index++) {
+            const start=flowTrail[index-1], end=flowTrail[index];
+            const fade=Math.max(0,1-(now-end.time)/760);
+            const hue=174+Math.min(72,index/flowTrail.length*72);
+            const color=`hsla(${hue},100%,68%,${fade*.48})`;
+            flowContext.beginPath();
+            flowContext.moveTo(start.x,start.y);
+            flowContext.quadraticCurveTo(start.x,start.y,(start.x+end.x)/2,(start.y+end.y)/2);
+            flowContext.strokeStyle=color;
+            flowContext.shadowColor=color;
+            flowContext.shadowBlur=18;
+            flowContext.lineWidth=2+fade*9;
+            flowContext.stroke();
+          }
+          flowContext.restore();
+        }
+        if (flowTrail.length>1) flowFrame=requestAnimationFrame(drawFlow);
+      };
+      window.addEventListener("pointermove",event=>{
+        if (event.pointerType==="touch") return;
+        flowTrail.push({x:event.clientX,y:event.clientY,time:performance.now()});
+        if (flowTrail.length>26) flowTrail.shift();
+        if (!flowFrame) flowFrame=requestAnimationFrame(drawFlow);
+      },{passive:true});
+      const navPill=document.querySelector(".nav");
+      let navRippleTimer;
+      window.addEventListener("scroll",()=>{
+        navPill.classList.add("scroll-ripple");
+        window.clearTimeout(navRippleTimer);
+        navRippleTimer=window.setTimeout(()=>navPill.classList.remove("scroll-ripple"),180);
+      },{passive:true});
+    }
     if (motionAllowed) {
       if (window.matchMedia("(pointer: fine)").matches) {
         const root = document.documentElement;
